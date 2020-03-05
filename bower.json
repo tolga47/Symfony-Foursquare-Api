@@ -1,0 +1,24 @@
+{
+  "name": "gulp-symfony",
+  "description": "Symfony assets management with Gulp",
+  "main": "",
+  "authors": [
+    "Tolga Filoglu <tolga@filoglu.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0",
+    "jquery": "^3.4.1"
+  }
+}

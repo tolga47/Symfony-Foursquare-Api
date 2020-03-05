@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Foursquare Test {% endblock %}
+
+{% block body %}
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="">
+            <div class="p-4 pt-5">
+                <ul class="list-unstyled components mb-5">
+                    {% for category in categories %}
+                    <li>
+                        {% if category.categories|length > 0 %}
+                            <a href="#cat-{{ category.id }}" data-name="{{ category.shortName }}" data-toggle="collapse" aria-expanded="false" class="catClick dropdown-toggle collapsed">{{ category.name }}</a>
+                            <ul class="list-unstyled collapse" id="cat-{{ category.id }}" style="">
+                                {% for category2 in category.categories %}
+                                    <li>
+                                        {% if category2.categories|length > 0 %}
+                                            <a href="#cat-{{ category2.id }}" data-toggle="collapse" aria-expanded="false" data-name="{{ category2.shortName }}" class="catClick dropdown-toggle collapsed">{{ category2.name }}</a>
+                                            <ul class="list-unstyled collapse" id="cat-{{ category2.id }}" style="">
+                                                {% for category3 in category2.categories %}
+                                                    <li>
+                                                        {% if category3.categories|length > 0 %}
+                                                            <a href="#cat-{{ category3.id }}" data-toggle="collapse" aria-expanded="false" data-name="{{ category3.shortName }}" class="catClick dropdown-toggle collapsed">{{ category3.name }}</a>
+                                                            <ul class="list-unstyled collapse" id="cat-{{ category3.id }}" style="">
+                                                                {% for category4 in category3.categories %}
+                                                                    <li>
+                                                                        <a href="#" class="catClick" data-name="{{ category4.shortName }}" onclick="return false;">{{ category4.name }}</a>
+                                                                    </li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        {% else %}
+                                                            <a href="#" class="catClick" data-name="{{ category3.shortName }}" onclick="return false;">{{ category3.name }}</a>
+                                                        {% endif %}
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        {% else %}
+                                            <a href="#" class="catClick" data-name="{{ category2.shortName }}" onclick="return false;">{{ category2.name }}</a>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <a href="#" class="catClick" data-name="{{ category.shortName }}" onclick="return false;">{{ category.name }}</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="footer">
+                    <p>
+                        ©2020 All rights reserved
+                    </p>
+                </div>
+            </div>
+        </nav>
+
+        <div id="content" class="p-4 p-md-5">
+            <h2 class="mb-4" id="catTitle">Please Select Category</h2>
+            <div id="category" class="row"></div>
+        </div>
+    </div>
+
+{% endblock %}

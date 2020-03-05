@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/register": "^7.8.6",
+    "bootstrap": "^4.4.1",
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.0",
+    "debowerify": "^1.5.0",
+    "del": "^5.1.0",
+    "grunt-bowercopy": "^1.2.5",
+    "grunt-browserify": "^5.3.0",
+    "grunt-browserify-alias": "^0.1.5",
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^2.0.2",
+    "jquery": "^3.4.1",
+    "merge-stream": "^2.0.0",
+    "popper.js": "^1.16.1",
+    "vinyl-source-stream": "^2.0.0",
+    "wiredep": "^4.0.0"
+  },
+  "dependencies": {
+    "bower": "^1.8.8",
+    "grunt-symfony": "^1.1.23"
+  }
+}
