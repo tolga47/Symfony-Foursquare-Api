@@ -31,7 +31,3 @@ Frontend tarafında bootstrap 4 ve jquery kullanılmıştır.
 Css ve js dosyalarının yönetimi için grunt / bower/ browserify kullanılmıştır.
 
 Daha sonra sevislere, http://sunucuip:8000/ şeklinde sunucu ip'nize göre bağlanabilirsiniz.
-
-## Demo Url
-
-http://64.225.98.120:8000/
